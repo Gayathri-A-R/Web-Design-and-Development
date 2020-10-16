@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button On Image</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		.container {
+			position: relative;
+			display: inline-block;
+		}
+		.btn {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 20px;
+			padding: 14px 20px;
+			cursor: pointer;
+			border: 1px solid black;
+		}
+
+		.btn:hover {
+			background-color: black;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="121img5.jpg">
+		<button class="btn">Visit Site</button>
+	</div>
+</body>
+</html>

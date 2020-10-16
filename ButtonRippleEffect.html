@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button ripple effect</title>
+	<style>
+		.button {
+			position: relative;
+			transition: .4s;
+			padding: 20px;
+			text-align: center;
+			font-size: 28px;
+			overflow: hidden;
+			text-decoration: none;
+			width: 200px;
+			cursor: pointer;
+			border: none;
+			background-color: darkgreen;
+			color: white;
+		}
+
+		.button:after {
+			content: "";
+			position: absolute;
+			display: block;
+			background-color: #f1f1f1;
+			padding-top: 300%;
+			padding-left: 350%;
+			margin-left: -20px !important;
+			margin-top: -120%;
+			opacity: 0;
+			transition: all .8s;
+		}
+
+		.button:active:after {
+			padding: 0;
+			margin: 0;
+			opacity: 1;
+			transition: 0s;
+		}
+	</style>
+</head>
+<body>
+	<h2>Animated Button - Ripple Effect</h2>
+
+<button class="button">Click Me</button>
+</body>
+</html>
