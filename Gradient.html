@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gradient</title>
+	<style>
+		div {
+			height: 400px;
+			width: 400px;
+		}
+
+		.div1 {
+			background-image: radial-gradient(circle, red, yellow, green);
+		}
+		.div2 {
+			background-image: radial-gradient(closest-side at 45% 70%, red, yellow, green);
+		}
+		.div3 {
+			background-image: radial-gradient(farthest-side at 45% 70%,red, yellow, green);
+		}
+		.div4 {
+			background-image: radial-gradient(closest-corner at 45% 70%, red, yellow, green);
+		}
+		.div5 {
+			background-image: radial-gradient(farthest-side at 45% 70%,red, yellow, green);
+		}
+	</style>
+</head>
+<body>
+	<div class="div1"></div>
+	<div class="div2"></div>
+	<div class="div3"></div>
+	<div class="div4"></div>
+	<div class="div5"></div>
+</body>
+</html>
