@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flex Box</title>
+	<style>
+		.flex-container {
+			display: flex;
+			height: 500px;
+			background-color: aqua;
+			flex-direction: row;		/*can have values column, column-reverse, row-reverse*/
+			flex-wrap: wrap;    /*wrap-reverse,nowrap*/
+										/*flex-flow : row wrap;*/
+			justify-content: center;  /*flex-start, flex-end, space-around, space-between*/
+			align-items: center;	/*flex-start, flex-end, baseline, strech*/
+			align-content: center;	/*strech, flex-start, flex-end, space-around, space-between*/
+		}
+
+
+		.flex-item {
+			width: 100px;
+			text-align: center;
+			background-color: lightgreen;
+			margin: 10px;
+			padding: 20px;
+			font-size: 30px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="flex-container">
+		<div class="flex-item" style="order: 2; flex-grow: 8">1</div>
+		<div class="flex-item" style="order: 3;flex-shrink: 0">2</div>
+		<div class="flex-item" style="order: 0">3</div>
+		<div class="flex-item" style="order: 1">4</div>
+		<div class="flex-item" style="flex-basis: 150px;">5</div>
+		<div class="flex-item" style="height: 80px; align-self: center">6</div>
+		<div class="flex-item">7</div>
+		<div class="flex-item">8</div>
+		<div class="flex-item">9</div>
+		<div class="flex-item">10</div>
+		<div class="flex-item">11</div>
+		<div class="flex-item">12</div>
+	</div>
+</body>
+</html>
