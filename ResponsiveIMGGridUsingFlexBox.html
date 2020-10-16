@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive Image Grid Using Flex Box</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			margin: 0;
+			font-family: Arial;
+		}
+		.header {
+			text-align: center;
+			padding: 32px;
+		}
+		.row {
+			display: flex;
+			padding: 0 4px;
+			flex-wrap: wrap;
+		}
+		.column {
+			flex: 25%;
+			max-width: 25%;
+			padding: 0 4px;
+		}
+		.column img {
+			vertical-align: center;
+			margin-top: 8px;
+		}
+
+		@media (max-width: 800px) {
+			.column {
+				flex: 50%;
+				max-width: 50%;
+			}
+		}
+
+		@media (max-width: 600px) {
+			.column {
+				flex: 100%;
+				max-width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h2>Responsive Img Grid</h2>
+	</div>
+	<div class="row">
+		<div class="column">
+			<img src="img22.jpg" style="width: 100%">
+			<img src="121img1.jpg" style="width: 100%">
+			
+			<img src="121img5.jpg" style="width: 100%">
+			<img src="121img7.jpg" style="width: 100%">
+			<img src="img20.jpg" style="width: 100%">
+			<img src="img16.jpg" style="width: 100%">
+			<img src="img14.jpg" style="width: 100%">
+		</div>
+		
+		<div class="column">
+			<img src="img11.jpg" style="width: 100%">
+			<img src="img24.jpg" style="width: 100%">
+			<img src="img13.jpg" style="width: 100%">
+			<img src="img14.jpg" style="width: 100%">
+			<img src="img15.jpg" style="width: 100%">
+			<img src="img23.jpg" style="width: 100%">
+			
+		</div>
+
+		<div class="column">
+			<img src="img23.jpg" style="width: 100%">
+			<img src="121img6.jpg" style="width: 100%">
+			<img src="img24.jpg" style="width: 100%">
+			<img src="img13.jpg" style="width: 100%">
+			<img src="121img1.jpg" style="width: 100%">
+			<img src="img11.jpg" style="width: 100%">
+			<img src="img16.jpg" style="width: 100%">
+			
+		</div>
+
+		<div class="column">
+			<img src="img25.jpg" style="width: 100%">
+			<img src="121img2.jpg" style="width: 100%">
+			<img src="121img7.jpg" style="width: 100%">
+			<img src="img26.jpg" style="width: 100%">
+			<img src="img11.jpg" style="width: 100%">
+			<img src="img24.jpg" style="width: 100%">
+			
+		</div>
+
+	</div>
+
+</body>
+</html>

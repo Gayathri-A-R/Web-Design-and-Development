@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> REsponsive Site using Grid</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		html {
+			font-family: "Lucida Sans", sans-serif;
+		}
+
+		video {
+			width: 100%;
+			height: auto;
+		}
+
+
+		.header {
+			padding: 15px;
+			background-color: blueviolet;
+			color: white;
+		}
+
+		.row::after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+
+		[class*="col-"] {
+			float: left;
+			padding: 15px;
+		}
+
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		ul li{
+			background-color: deepskyblue;
+			margin-top: 7px;
+			padding: 8px;
+			font-size: 20px;
+			border:1px solid deepskyblue;
+			border-radius: 4px;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+			color: white;
+
+		}
+
+		ul li:hover {
+			background-color: dodgerblue;
+		}
+
+		.col-9 p {
+			font-size: 20px;
+		}
+
+		.aside {
+  background-color: #33b5e5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+
+
+		.col-1 {width: 8.33%;}
+		.col-2 {width: 16.66%;}
+		.col-3 {width: 25%;}
+		.col-4 {width: 33.33%;}
+		.col-5 {width: 41.66%;}
+		.col-6 {width: 50%;}
+		.col-7 {width: 58.33%;}
+		.col-8 {width: 66.66%;}
+		.col-9 {width: 75%;}
+		.col-10 {width: 83.33%;}
+		.col-11 {width: 91.66%;}
+		.col-12 {width: 100%;}
+
+
+		[class*="col-"] {
+				  width: 100%;
+				}
+
+				@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+
+		@media only screen and (min-width: 768px) {
+				 
+				  .col-1 {width: 8.33%;}
+				  .col-2 {width: 16.66%;}
+				  .col-3 {width: 25%;}
+				  .col-4 {width: 33.33%;}
+				  .col-5 {width: 41.66%;}
+				  .col-6 {width: 50%;}
+				  .col-7 {width: 58.33%;}
+				  .col-8 {width: 66.66%;}
+				  .col-9 {width: 75%;}
+				  .col-10 {width: 83.33%;}
+				  .col-11 {width: 91.66%;}
+				  .col-12 {width: 100%;}
+				}
+
+			
+/*
+
+Typical Device Breakpoints
+There are tons of screens and devices with different heights and widths, so it is hard to create an exact breakpoint for each device. To keep things simple you could target five groups:
+
+Example
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
+
+
+
+
+Orientation: Portrait / Landscape
+Media queries can also be used to change layout of a page depending on the orientation of the browser.
+
+You can have a set of CSS properties that will only apply when the browser window is wider than its height, a so called "Landscape" orientation:
+
+Example
+The web page will have a lightblue background if the orientation is in landscape mode:
+
+@media only screen and (orientation: landscape) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+
+You can use the media query min-device-width, instead of min-width, which checks the device width, instead of the browser width. Then the image will not change when you resize the browser window:
+
+Example
+/* For devices smaller than 400px: */
+body {
+  background-image: url('img_smallflower.jpg');
+}
+
+/* For devices 400px and larger: */
+@media only screen and (min-device-width: 400px) {
+  body {
+    background-image: url('img_flowers.jpg');
+  }
+}
+
+The <picture> element works similar to the <video> and <audio> elements. You set up different sources, and the first source that fits the preferences is the one being used:
+
+Example
+<picture>
+  <source srcset="img_smallflower.jpg" media="(max-width: 400px)">
+  <source srcset="img_flowers.jpg">
+  <img src="img_flowers.jpg" alt="Flowers">
+</picture>
+The srcset attribute is required, and defines the source of the image.
+
+The media attribute is optional, and accepts the media queries you find in CSS @media rule.
+
+You should also define an <img> element for browsers that do not support the <picture> element.
+
+
+*/
+
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1>Chania</h1>
+	</div> 
+
+	<div class="row">
+		<div class="col-3 col-s-3">
+			<ul>
+			    <li>The Flight</li>
+			    <li>The City</li>
+			    <li>The Island</li>
+			    <li>The Food</li>
+ 			</ul>
+ 		</div>
+
+ 		<div class="col-6 col-s-9">
+ 			<h1>The City</h1>
+			<p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+			<p>Resize the browser window to see how the content respond to the resizing.</p>
+			<video width="400px" controls>
+				<source src="D:\Desktop\New folder (2)_21-12-18\BiennaleWho'sComing\vid.mp4" type="video/mp4">
+					Your Browser do not support HTML5 Video
+			</video>
+		</div>
+
+		<div class="col-3 col-s-12">
+    <div class="aside">
+      <h2>What?</h2>
+      <p>Chania is a city on the island of Crete.</p>
+      <h2>Where?</h2>
+      <p>Crete is a Greek island in the Mediterranean Sea.</p>
+      <h2>How?</h2>
+      <p>You can reach Chania airport from all over Europe.</p>
+    </div>
+  </div>
+
+	</div>
+
+	<div class="footer">
+  <p>Resize the browser window to see how the content respond to the resizing.</p>
+</div>
+</body>
+</html>
