@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Filters</title>
+	<style>
+		.dropshadow {
+			filter: drop-shadow(5px 9px 2px blue);  /*drop-shadow(w h b c)*/
+		}
+		.grayscale {
+			filter: grayscale(80%);
+		}
+		.sepia {
+			filter: sepia(80%);
+		}
+		.saturate {
+			filter: saturate(10%);
+		}
+		.huerotate {
+			filter: hue-rotate(90deg);
+		}
+		.invert {
+			filter: invert(80%);
+		}
+		.opacity {
+			filter: opacity(30%);
+		}
+		.brightness {
+			filter: brightness(50%);
+		}
+		.contrast {
+			filter: contrast(140%);
+		}
+		.blur {
+			filter: blur(5px);
+		}
+		.div1 {
+			filter: opacity(50%) drop-shadow(5px 5px 2px red);
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p>Original image</p>
+	<img src="img4.jpg" alt="sample image" width="600px" height="400px">
+</div>
+<div>
+	<p>Drop shadow</p>
+	<img class="dropshadow" src="img4.jpg" alt="sample image" width="600px" height="400px">
+</div>
+<div>
+	<p>Gray Scale</p>
+	<img class="grayscale" src="img4.jpg" alt="sample image" width="600px" height="400px">
+</div>
+<div>
+	<p>Sepia</p>
+	<img class="sepia" src="img4.jpg" alt="sample image" width="600px" height="400px">
+</div>
+<div>
+	<p>Saturate</p>
+	<img class="saturate" src="img4.jpg" alt="sample image" width="600px" height="400px">
+</div>
+<div>
+	<p>Hue Rotate</p>
+	<img class="huerotate" src="img4.jpg" alt="sample image" width="600px" height="400px">
+</div>
+<div>
+	<p>Invert</p>
+	<img class="invert" src="img4.jpg" alt="sample image" width="600px" height="400px">
+</div>
+<div style="background-color: gold;">
+	<p>opacity</p>
+	<img class="opacity" src="img4.jpg" alt="sample image" width="600px" height="400px">
+</div>
+<div>
+	<p>brightness</p>
+	<img class="brightness" src="img4.jpg" alt="sample image" width="600px" height="400px">
+</div>
+<div>
+	<p>contrast</p>
+	<img class="contrast" src="img4.jpg" alt="sample image" width="600px" height="400px">
+</div>
+<div>
+	<p>blur</p>
+	<img class="blur" src="img4.jpg" alt="sample image" width="600px" height="400px">
+</div>
+<div>
+	<p>Multile filter properties</p>
+	<img class="div1" src="img4.jpg" alt="sample image" width="600px" height="400px">
+</div>
+</body>
+</html>
