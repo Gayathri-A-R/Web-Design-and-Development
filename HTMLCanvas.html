@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="HTML_Canvas" content="HTML5 Canvas">
+	<meta name="keywords" content="html,canvas">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="refresh" content="30">
+	<base href="HTMLCanvas.html" target="_blank">
+	<title>HTML Canvas</title>
+</head>
+<body>
+	<!--
+		getContext() is a built-in HTML object, with properties and methods for drawing
+	-->
+	<canvas id="canvas1" width="200" height="150" style="border: 1px solid black">Canvas not supported</canvas>
+	<script>
+		var c= document.getElementById("canvas1");
+		var ctx= c.getContext("2d");
+		ctx.fillStyle= "Red";
+		ctx.fillRect(10,10,100,50); //(x,y,width,height)
+	</script>
+
+	<canvas id="canvas2" width="200" height="150" style="border: 1px solid black">Canvas not supported</canvas>
+	<script>
+		var c= document.getElementById("canvas2");
+		var ctx= c.getContext("2d");
+		ctx.moveTo(0,0);
+		ctx.lineTo(200,150);
+		ctx.stroke();
+	</script>
+
+	<canvas id="canvas3" width="200" height="150" style="border: 1px solid black">Canvas not supported</canvas>
+	<script>
+		var c= document.getElementById("canvas3");
+		var ctx= c.getContext("2d");
+		ctx.beginPath(); //begins a path
+		ctx.arc(100,75,60,0,2*Math.PI); //(x,y,radius, start angle, end angle)
+		ctx.stroke();
+	</script>
+
+</body>
+</html>

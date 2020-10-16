@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Graphics</title>
+	<meta charset="UTF-8">
+	<mata name="Graphics" content="HTML5 Graphics">
+	<meta name="keywords" content="html,css,js,graphics">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="refresh" content="30">
+	<base href="HTML_Graphics.html" target="_blank">
+</head> 
+<body>
+	<canvas id="canvas1" width="400" height="300" style="border: 1px solid black"></canvas>
+
+	<script>
+		var c= document.getElementById("canvas1");
+		var ctx= c.getContext("2d");
+		ctx.moveTo(0,0);
+		ctx.lineTo(400,300);
+		ctx.stroke();
+	</script>
+
+	<canvas id="canvas2" width="400" height="300" style="border: 1px solid black"></canvas>
+
+	<script>
+		var c= document.getElementById("canvas2");
+		var ctx= c.getContext("2d");
+		ctx.beginPath();
+		ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+		ctx.stroke();
+	</script>
+
+	<canvas id="canvas3" width="400" height="300" style="border: 1px solid black">Your browser does not support HTML Canvas</canvas>
+
+	<script>
+		var c= document.getElementById("canvas3");
+		var ctx= c.getContext("2d");
+		ctx.font="30px Arial";
+		ctx.fillText("CODE RED", 10, 50);////fillText(text,x,y) - draws "filled" text on the canvas
+	</script>
+
+	<canvas id="canvas4" width="400" height="300" style="border: 1px solid black"></canvas>
+
+	<script>
+        //strokeText(text,x,y) - draws text on the canvas (no fill)
+		var c= document.getElementById("canvas4");
+		var ctx= c.getContext("2d");
+		ctx.font="30px Arial";
+		ctx.strokeText("CODE RED", 10, 50);
+	</script>
+
+	<canvas id="canvas8" width="400" height="300" style="border: 1px solid black"></canvas>
+
+	<script>
+        //strokeText(text,x,y) - draws text on the canvas (no fill)
+		var canvas = document.getElementById("canvas8");
+		var ctx = canvas.getContext("2d");
+		ctx.font = "30px Comic Sans MS";
+		ctx.fillStyle = "red";
+		ctx.textAlign = "center";
+		ctx.fillText("Hello World", canvas.width/2, canvas.height/2);	
+	</script>
+
+	<canvas id="canvas5" width="400" height="300" style="border: 1px solid black"></canvas>
+
+	<script>
+		var c = document.getElementById("canvas5");
+		var ctx = c.getContext("2d");
+
+		//create gradient
+		var grd = ctx.createLinearGradient(0,0,200,0); //(x,y,x1,y1)
+		grd.addColorStop(0, "red"); //The addColorStop() method specifies the color stops, and its position along the gradient. Gradient positions can be 								//anywhere between 0 to 1.
+		grd.addColorStop(1, "white");
+
+		//fill gradient
+		ctx.fillStyle = grd;
+		ctx.fillRect(10,10,150,80);
+	</script>
+
+	<canvas id="canvas6" width="400" height="300" style="border: 1px solid black"></canvas>
+
+	<script>
+		var c= document.getElementById("canvas6")
+		var ctx= c.getContext("2d");
+
+		var grd= ctx.createRadialGradient(75, 50, 5, 90, 60, 100); //(x,y,r,x1,y1,r1)
+		grd.addColorStop(0, "red");
+		grd.addColorStop(1, "white");
+
+		ctx.fillStyle= grd;
+		ctx.fillRect(10, 10, 150, 80);
+	</script>
+
+	<section>
+		<p>Image</p>
+		<img src="img6.jpg" id="image" width="300" height="250">
+
+
+		<canvas id="canvas7" width="400" height="300" style="border: 1px solid black"></canvas>
+		<button onclick="function1()">Cilck Here</button>
+
+		<script>
+			function function1() {
+				var c= document.getElementById("canvas7");
+				var ctx= c.getContext("2d");
+				var img= document.getElementById("image");
+				ctx.drawImage(img, 10, 10);
+			}
+		</script>
+	</section>
+
+</body>
+</html>
