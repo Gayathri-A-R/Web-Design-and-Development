@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grid</title>
+	<style>
+		.container {
+			display: grid;
+			grid-gap: 10px;
+			grid-template-columns: auto auto auto auto auto;
+			background-color: lightgreen;
+			padding: 10px;
+		}
+		.griditem {
+			background-color: seagreen;
+			border: 2px double olive;
+			color: white;
+			text-align: center;
+			padding: 12px 14px;
+		}
+
+		.item1 {
+			grid-column-start: 1;
+			grid-column-end: 5;
+			grid-row: 1;
+			grid-row-end: 3;
+		}
+
+		
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="griditem item1">1</div>
+	<div class="griditem">2</div>
+	<div class="griditem">3</div>
+	<div class="griditem">4</div>
+	<div class="griditem">5</div>
+	<div class="griditem">6</div>
+	<div class="griditem">7</div>
+	<div class="griditem">8</div>
+	<div class="griditem">9</div>
+	<div class="griditem">10</div>
+</div>
+
+
+
+</body>
+</html>

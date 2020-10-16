@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grid Responsive Site</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		.container2 {
+			margin-left: 50px;
+			margin-right: 50px;
+			margin-top:10px;
+			margin-bottom: 20px;
+			display: grid;
+			grid-gap: 30px;
+			padding: 10px;
+			grid-template-columns: auto auto auto auto auto auto auto auto;
+			grid-template-rows: 100px 100px 100px 100px 100px 100px 100px ;
+		}
+
+		.griditem2 {
+			box-shadow: 10px 10px 10px indianred;
+			border: 2px solid indianred;
+			text-align: center;
+			padding: 12px 14px;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.item11 {
+			grid-area: 1/1/2/span 8;
+		}
+		.item12 {
+			grid-area: 2/1/5/span 8;
+		}
+		.item13 {
+			grid-area: 5/1/7/3;
+		}
+		.item14 {
+			grid-area: 5/3/7/7;
+		}
+		.item15 {
+			grid-area: 5/7/7/9;
+		}
+		.item16 {
+			grid-area: 7/1/7/span 8;
+		}
+
+		
+		.griditem2 p {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		@media only screen and (max-width: 1000px) {
+			.container2 {
+				grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 100px ;
+			}
+			.item11 {
+			grid-area: 1/1/2/span 8;
+			}
+			.item12 {
+				grid-area: 2/1/5/span 8;
+			}
+			.item13 {
+				grid-area: 5/1/7/4;
+			}
+			.item14 {
+				grid-area: 5/4/7/9;
+			}
+			.item15 {
+				grid-area: 7/1/9/9;
+			}
+			.item16 {
+				grid-area: 9/1/10/span 8;
+			}
+
+		}
+
+		@media only screen and (max-width: 600px) {
+			.container2 {
+				grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+			}
+			.item11 {
+			grid-area: 1/1/2/span 8;
+			}
+			.item12 {
+				grid-area: 2/1/5/span 8;
+			}
+			.item13 {
+				grid-area: 5/1/7/span 8;
+			}
+			.item14 {
+				grid-area: 7/1/9/span 8;
+			}
+			.item15 {
+				grid-area: 9/1/11/9;
+			}
+			.item16 {
+				grid-area: 11/1/12/span 8;
+			}
+
+		}
+	</style>
+</head>
+<body>
+<div class="container2">
+	<div class="griditem2 item11"><p>1</p></div>
+	<div class="griditem2 item12"><p>2</p></div>
+	<div class="griditem2 item13"><p>3</p></div>
+	<div class="griditem2 item14"><p>4</p></div>
+	<div class="griditem2 item15"><p>5</p></div>
+	<div class="griditem2 item16"><p>6</p></div>
+</div>
+</body>
+</html>
