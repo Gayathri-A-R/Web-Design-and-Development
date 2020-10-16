@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animations</title>
+	<style>
+		.div1 {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			animation-name: colorchange;
+			animation-duration: 2s;
+			animation-timing-function: ease-in; /* ease/ease-in/ease-out/ease-in-out/cubic-benzier*/
+			animation-delay: 2s;
+			animation-iteration-count: infinite;
+			animation-direction: reverse; /*normal/reverse/alternate/alternate reverse*/
+		}
+		@keyframes colorchange {
+			0% { background-color: red; }
+			50% { background-color: green; }
+			100% { background-color: blue }
+		}
+		.div3 {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			animation: colorchange 2s ease-in 2s infinite reverse;
+		}
+		@keyframes colorchange {
+			0% { background-color: red; }
+			50% { background-color: green; }
+			100% { background-color: blue }
+		}
+		.div2 {
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			animation-name: colorchange2;
+			animation-duration: 2s;
+			animation-delay: 3s;
+		}
+		@keyframes colorchange2 {
+			from { background-color: green; }
+			to { background-color: blue }
+		}
+	</style>
+</head>
+<body>
+	<div class="div1">
+	</div>
+	<div class="div3">
+	</div>
+	<div class="div2">
+	</div>
+</body>
+</html>

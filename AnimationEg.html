@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation Eg</title>
+	<style>
+		div {
+			height: 100px;
+			width: 100px;
+			background-color: indianred;
+			animation-name: movediv;
+			animation-duration: 2s;
+			animation-iteration-count: 1;
+			animation-delay: .5s;
+			animation-timing-function: cubic-bezier(0,0,1,1);
+			top: 0;
+			left: 0;
+			position: relative;
+			animation-fill-mode: both;
+		}
+
+		@keyframes movediv {
+			0% { background-color: indianred; top: 0px; left: 0px; }
+			25% { background-color: pink; top: 0px; left: 500px; }
+			50% { background-color: violet; top: 500px; left: 500px; }
+			100% { background-color: orange; top: 500px; left: 0px; }
+			
+		}
+
+
+	</style>
+</head>
+<body>
+	<div></div>
+	<p>Using negative values: Here, the animation will start as if it had already been playing for 2 seconds:</p>
+</body>
+</html>

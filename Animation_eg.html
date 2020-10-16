@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation</title>
+	<style>
+
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			background-color: #34495e;
+		}
+
+		.container {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+
+		.row1 div, .row2 div, .row3 div, .row4 div, .row5 div {
+			display: inline-block;
+		}
+
+		.row1 div:nth-child(1), .row2 div:nth-child(4), .row3 div:nth-child(3), .row4 div:nth-child(1), .row5 div:nth-child(2) {
+			box-shadow: 0 0 10px cadetblue;
+
+		}
+		.row1 div:nth-child(2), .row2 div:nth-child(5), .row3 div:nth-child(1), .row4 div:nth-child(5), .row5 div:nth-child(3){
+			box-shadow: 0 0 10px coral;
+		}
+		.row1 div:nth-child(3), .row2 div:nth-child(1), .row3 div:nth-child(5), .row4 div:nth-child(2), .row5 div:nth-child(4){
+			box-shadow: 0 0 10px gold;
+		}
+		.row1 div:nth-child(4), .row2 div:nth-child(2), .row3 div:nth-child(4), .row4 div:nth-child(3), .row5 div:nth-child(5){
+			box-shadow: 0 0 10px darkseagreen;
+		}
+		.row1 div:nth-child(5), .row2 div:nth-child(3), .row3 div:nth-child(2), .row4 div:nth-child(4), .row5 div:nth-child(1) {
+			box-shadow: 0 0 10px orange;
+		}
+
+
+
+		.row1:hover div:nth-child(1), .row2:hover div:nth-child(1), .row3:hover div:nth-child(1), .row4:hover div:nth-child(1), .row5:hover div:nth-child(1) {
+			transform: rotate(20deg);
+		}
+		.row1:hover div:nth-child(2), .row2:hover div:nth-child(2), .row3:hover div:nth-child(2), .row4:hover div:nth-child(2), .row5:hover div:nth-child(2) {
+			transform: rotate(-20deg);
+		}
+		.row1:hover div:nth-child(3), .row2:hover div:nth-child(3), .row3:hover div:nth-child(3), .row4:hover div:nth-child(3), .row5:hover div:nth-child(3) {
+			transform: rotate(50deg);
+		}
+		.row1:hover div:nth-child(4), .row2:hover div:nth-child(4), .row3:hover div:nth-child(4), .row4:hover div:nth-child(4), .row5:hover div:nth-child(4) {
+			transform: rotate(-300deg);
+		}
+		.row1:hover div:nth-child(5), .row2:hover div:nth-child(5), .row3:hover div:nth-child(5), .row4:hover div:nth-child(5), .row5:hover div:nth-child(5) {
+			transform: rotate(80deg);
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row1">
+			<div style="background-color: cadetblue; width: 50px; height: 50px;"></div>
+			<div style="background-color: coral; width: 50px; height: 50px"></div>
+			<div style="background-color: gold; width: 50px; height: 50px"></div>
+			<div style="background-color: darkseagreen; width: 50px; height: 50px"></div>
+			<div style="background-color: orange; width: 50px; height: 50px"></div>
+		</div>
+		<div class="row2">
+			<div style="background-color: gold; width: 50px; height: 50px"></div>
+			<div style="background-color: darkseagreen; width: 50px; height: 50px"></div>
+			<div style="background-color: orange; width: 50px; height: 50px"></div>
+			<div style="background-color: cadetblue; width: 50px; height: 50px;"></div>
+			<div style="background-color: coral; width: 50px; height: 50px"></div>
+		</div>
+		<div class="row3">
+			<div style="background-color: coral; width: 50px; height: 50px;"></div>
+			<div style="background-color: orange; width: 50px; height: 50px"></div>
+			<div style="background-color: cadetblue; width: 50px; height: 50px"></div>
+			<div style="background-color: darkseagreen; width: 50px; height: 50px"></div>
+			<div style="background-color: gold; width: 50px; height: 50px"></div>
+		</div>
+		<div class="row4">
+			<div style="background-color: cadetblue; width: 50px; height: 50px;"></div>
+			<div style="background-color: gold; width: 50px; height: 50px"></div>
+			<div style="background-color: darkseagreen; width: 50px; height: 50px"></div>
+			<div style="background-color: orange; width: 50px; height: 50px"></div>
+			<div style="background-color: coral; width: 50px; height: 50px"></div>
+			
+			
+		</div>
+		<div class="row5">
+			<div style="background-color: orange; width: 50px; height: 50px"></div>
+			<div style="background-color: cadetblue; width: 50px; height: 50px;"></div>
+			<div style="background-color: coral; width: 50px; height: 50px"></div>
+			<div style="background-color: gold; width: 50px; height: 50px"></div>
+			
+			<div style="background-color: darkseagreen; width: 50px; height: 50px"></div>
+			
+		</div>
+	</div>
+</body>
+</html>
