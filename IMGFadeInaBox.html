@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Img Fade in a box</title>
+	<style>
+		.container {
+			position: relative;
+			width: 50%;
+		}
+
+		image {
+			display: block;
+			transition: .5s ease;
+			backface-visibility: hidden;
+			width: 100%;
+			opacity: 1;
+			height: auto;
+		}
+
+		.middle {
+			transition: .5s ease;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			opacity: 0;
+		}
+
+		.container:hover .image {
+			opacity: .3;
+		}
+
+		.container:hover .middle {
+			opacity: 1;
+		}
+		.text {
+			font-family: sans-serif;
+			color: white;
+			background-color: gray;
+			padding: 16px 32px;
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Fade in A Box
+	<div class="container">
+		<img src="img20.jpg" class="image" style="width: 100%;">
+		<div class="middle">
+			<div class="text">CODE RED</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slide in Right</title>
+	<style>
+	.container {
+			position: relative;
+			width: 50%;
+		}
+
+		.image {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		.overlay {
+			position: absolute;
+			top: 0;
+			left: 100%;
+			right: 0;
+			bottom: 0;
+			height: 100%;
+			width: 0;
+			transition: .5s ease;
+			background-color: #008CBA;
+			overflow: hidden;
+		}
+
+		.container:hover .overlay {
+			width: 100%;
+			left: 0;
+		}
+
+		.text {
+			white-space: nowrap;
+			overflow: hidden;
+			color: white;
+			font-size: 20px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Slide In from Right</h1>
+	<div class="container">
+		<img src="img20.jpg" class="image">
+		<div class="overlay">
+			<div class="text">CODE RED</div>
+		</div>
+	</div>
+</body>
+</html>
